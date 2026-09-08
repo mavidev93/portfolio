@@ -1,5 +1,5 @@
 import { pageContants } from '@/constants/contant/page'
-import Sheet from '@/components/app/home/components/shared/sheet'
+import Sheet from '@/components/app/home/components/_shared/sheet'
 
 const { home } = pageContants
 
