@@ -1,26 +1,36 @@
 {
-  "name": "abdolreza-aqasi-portfolio",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "next": "16.3.4",
-    "react": "^19.2.8",
-    "react-dom": "^19.2.8"
-  },
-  "devDependencies": {
-    "@tailwindcss/postcss": "^4.3.3",
-    "@types/node": "^26.4.1",
-    "@types/react": "^19.2.18",
-    "@types/react-dom": "^19.2.7",
-    "autoprefixer": "^10.5.5",
-    "postcss": "^8.5.28",
-    "tailwindcss": "^4.3.3",
-    "typescript": "^7.0.2"
-  }
+   "name": "abdolreza-aqasi-portfolio",
+   "version": "0.1.0",
+   "private": true,
+   "scripts": {
+      "dev": "next dev",
+      "build": "next build",
+      "start": "next start",
+      "lint": "next lint",
+      "typecheck": "tsc --noEmit",
+      "test": "echo \"No test framework configured yet\" && exit 0",
+      "prepare": "husky"
+   },
+   "dependencies": {
+      "next": "16.3.4",
+      "react": "^19.2.8",
+      "react-dom": "^19.2.8"
+   },
+   "devDependencies": {
+      "@commitlint/cli": "^21.2.2",
+      "@commitlint/config-conventional": "^21.2.2",
+      "@tailwindcss/postcss": "^4.3.3",
+      "@types/node": "^26.4.1",
+      "@types/react": "^19.2.18",
+      "@types/react-dom": "^19.2.7",
+      "autoprefixer": "^10.5.5",
+      "husky": "^9.1.7",
+      "lint-staged": "^17.5.0",
+      "postcss": "^8.5.28",
+      "prettier": "^3.9.6",
+      "prettier-plugin-organize-imports": "^4.3.0",
+      "prettier-plugin-tailwindcss": "^0.8.1",
+      "tailwindcss": "^4.3.3",
+      "typescript": "^7.0.2"
+   }
 }
