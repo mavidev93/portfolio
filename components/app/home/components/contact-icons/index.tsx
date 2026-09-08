@@ -1,16 +1,52 @@
+'use client'
+
+import { useEffect, useState } from 'react'
 import { pageContants } from '@/constants/contant/page'
-import IconLink from '@/components/app/home/components/shared/icon-link'
+import IconLink from '@/components/app/home/components/_shared/icon-link'
 
 const { home } = pageContants
+const { email } = home.contactLinks
 
 export default function ContactIcons() {
+   const [copied, setCopied] = useState(false)
+
+   useEffect(() => {
+      if (!copied) return
+      const timer = setTimeout(() => setCopied(false), 1600)
+      return () => clearTimeout(timer)
+   }, [copied])
+
+   const copyEmail = async () => {
+      try {
+         await navigator.clipboard.writeText(email.value)
+      } catch {
+         const field = document.createElement('textarea')
+         field.value = email.value
+         document.body.appendChild(field)
+         field.select()
+         document.execCommand('copy')
+         field.remove()
+      }
+      setCopied(true)
+   }
+
    return (
       <nav
          className="contact-icons"
          aria-label={home.ariaLabels.contact}>
-         <IconLink
-            href={home.contactLinks.email.href}
-            label={home.contactLinks.email.label}>
+         <button
+            type="button"
+            className="copy-email"
+            aria-label={email.label}
+            title={email.label}
+            onClick={copyEmail}>
+            {copied && (
+               <span
+                  className="copy-tip"
+                  role="status">
+                  {email.copiedLabel}
+               </span>
+            )}
             <svg
                viewBox="0 0 24 24"
                fill="none"
@@ -27,7 +63,7 @@ export default function ContactIcons() {
                />
                <path d="M3.5 6.5l8.5 6.5 8.5-6.5" />
             </svg>
-         </IconLink>
+         </button>
          <IconLink
             href={home.contactLinks.github.href}
             label={home.contactLinks.github.label}>

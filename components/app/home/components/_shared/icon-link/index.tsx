@@ -11,7 +11,9 @@ export default function IconLink({ href, label, children }: IconLinkProps) {
       <a
          href={href}
          aria-label={label}
-         title={label}>
+         title={label}
+         target="_blank"
+         rel="noopener noreferrer">
          {children}
       </a>
    )

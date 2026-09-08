@@ -5,9 +5,9 @@ export const pageContants = {
          contact: 'Contact'
       },
       contactLinks: {
-         email: { href: 'mailto:you@example.com', label: 'Email' },
-         github: { href: '#', label: 'GitHub' },
-         linkedin: { href: '#', label: 'LinkedIn' }
+         email: { value: 'aqassi.abdolreza@gmail.com', label: 'Email', copiedLabel: 'Copied!' },
+         github: { href: 'https://github.com/mavidev93', label: 'GitHub' },
+         linkedin: { href: 'https://www.linkedin.com/in/abdolreza-aqasi-2125381b0/', label: 'LinkedIn' }
       },
       sheets: {
          profile: { number: 'SHEET 01', title: 'PROFILE' },
