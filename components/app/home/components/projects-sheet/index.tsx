@@ -1,16 +1,13 @@
 import { pageContants } from '@/constants/contant/page'
+import Sheet from '@/components/app/home/components/shared/sheet'
 
 const { home } = pageContants
 
 export default function ProjectsSheet() {
    return (
-      <section
-         className="sheet"
-         id="sheet-04">
-         <div className="sheet-label">
-            {home.sheets.projects.number} <span className="rule" /> {home.sheets.projects.title}
-         </div>
-
+      <Sheet
+         id="sheet-04"
+         label={home.sheets.projects}>
          {home.projects.map((project) => (
             <div
                className="project"
@@ -22,6 +19,6 @@ export default function ProjectsSheet() {
                </div>
             </div>
          ))}
-      </section>
+      </Sheet>
    )
 }

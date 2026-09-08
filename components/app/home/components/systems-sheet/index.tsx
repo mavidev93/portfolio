@@ -1,16 +1,13 @@
 import { pageContants } from '@/constants/contant/page'
+import Sheet from '@/components/app/home/components/shared/sheet'
 
 const { home } = pageContants
 
 export default function SystemsSheet() {
    return (
-      <section
-         className="sheet"
-         id="sheet-03">
-         <div className="sheet-label">
-            {home.sheets.systems.number} <span className="rule" /> {home.sheets.systems.title}
-         </div>
-
+      <Sheet
+         id="sheet-03"
+         label={home.sheets.systems}>
          {home.skillGroups.map((group) => (
             <div
                className="skill-group"
@@ -23,6 +20,6 @@ export default function SystemsSheet() {
                </div>
             </div>
          ))}
-      </section>
+      </Sheet>
    )
 }

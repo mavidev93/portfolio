@@ -1,15 +1,13 @@
 import { pageContants } from '@/constants/contant/page'
+import Sheet from '@/components/app/home/components/shared/sheet'
 
 const { home } = pageContants
 
 export default function ProfileHeader() {
    return (
-      <section
-         className="sheet"
-         id="sheet-01">
-         <div className="sheet-label">
-            {home.sheets.profile.number} <span className="rule" /> {home.sheets.profile.title}
-         </div>
+      <Sheet
+         id="sheet-01"
+         label={home.sheets.profile}>
          <h1>{home.profile.name}</h1>
          <p className="role">{home.profile.role}</p>
          <p className="lede">{home.profile.lede}</p>
@@ -20,6 +18,6 @@ export default function ProfileHeader() {
                </span>
             ))}
          </div>
-      </section>
+      </Sheet>
    )
 }

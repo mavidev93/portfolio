@@ -1,16 +1,13 @@
 import { pageContants } from '@/constants/contant/page'
+import Sheet from '@/components/app/home/components/shared/sheet'
 
 const { home } = pageContants
 
 export default function ExperienceSheet() {
    return (
-      <section
-         className="sheet"
-         id="sheet-02">
-         <div className="sheet-label">
-            {home.sheets.experience.number} <span className="rule" /> {home.sheets.experience.title}
-         </div>
-
+      <Sheet
+         id="sheet-02"
+         label={home.sheets.experience}>
          {home.jobs.map((job) => (
             <div
                className="job"
@@ -36,6 +33,6 @@ export default function ExperienceSheet() {
                </div>
             </div>
          ))}
-      </section>
+      </Sheet>
    )
 }
